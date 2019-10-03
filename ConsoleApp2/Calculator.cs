@@ -103,5 +103,21 @@ namespace ConsoleApp2
             return (num1 / num2);
         }
 
+        public double GenMagicNum(double input, IFileReader fileReader)
+        {
+            double result = 0;
+            int choice = Convert.ToInt16(input);
+            //Dependency Injection ------------------------------
+            
+            //----------------------------------------
+            string[] magicStrings = fileReader.Read("../../../../ConsoleApp2/MagicNumbers.txt");
+            if ((choice >= 0) && (choice < magicStrings.Length))
+            {
+                result = Convert.ToDouble(magicStrings[choice]);
+            }
+            result = (result > 0) ? (2 * result) : (-2 * result);
+            return result;
+        }
+
     }
 }

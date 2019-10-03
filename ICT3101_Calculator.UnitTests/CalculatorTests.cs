@@ -45,5 +45,12 @@ namespace Tests
             Assert.That(() => _calculator.Factorial(5), Is.EqualTo(120));
         }
 
+        [Test]
+        [TestCase(1)]
+        public void MagicNumber_WithEachLine_ResultExpectedResult(double choice)
+        {
+            Assert.That(() => _calculator.GenMagicNum(choice, new FileReader()), Is.EqualTo(8));
+        }
+
     }
 }
