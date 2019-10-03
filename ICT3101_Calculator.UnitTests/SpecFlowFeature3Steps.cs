@@ -9,7 +9,7 @@ namespace ICT3101_Calculator.UnitTests
     public class UsingCalculatorAvailabilitySteps
     {
         private Calculator _calculator;
-        // Context Injection for SpecFlow
+        // Context Injection for SpecFlow#
         private UsingCalculatorAvailabilitySteps(Calculator calc)
         {
             this._calculator = calc;
